@@ -1,0 +1,254 @@
+***
+
+# **Oleon Chat Widget NPM Library Documentation**
+
+**Version**: 1.0
+**Description**: Integrate the Oleon Chat widget seamlessly into any web application using our NPM library.
+
+***
+
+## **Table of Contents**
+
+1. [Overview](#overview)
+
+2. [Requirements](#requirements)
+
+3. [Installation](#installation)
+
+4. [Basic Integration](#basic-integration)
+
+5. [Advanced Configuration](#advanced-configuration)
+
+6. [Customizing the Chat Widget](#customizing-the-chat-widget)
+
+7. [API Integration](#api-integration)
+
+8. [Example Project](#example-project)
+
+9. [Troubleshooting](#troubleshooting)
+
+10. [Support](#support)
+
+***
+
+## **1. Overview**
+
+The **Oleon Chat Widget NPM Library** allows you to integrate an AI-powered chatbot into any modern web application. The widget provides real-time support, enhances user experience, and can be customized to match your brand design.
+
+***
+
+## **2. Requirements**
+
+Before integrating the Oleon Chat widget, ensure the following:
+
+* **Node.js**: Version **14+**
+
+* **React**: Version **18+**
+
+* A valid **Oleon API Key & Service ID** (provided after purchase).
+
+* Internet connectivity to access Oleon backend APIs.
+
+***
+
+## **3. Installation**
+
+To install the Oleon Chat widget, run the following command in your React project directory:
+
+```bash
+npm install oleon-chat-widget
+```
+
+Alternatively, use Yarn:
+
+```bash
+yarn add oleon-chat-widget
+```
+
+***
+
+## **4. Basic Integration**
+
+Integrate the Oleon Chat widget into your project with the following steps:
+
+### **Step 1: Import the Chat Widget**
+
+In your application, import the `initializeChatWidget` function and the required CSS file:
+
+```jsx
+import "oleon-chat-widget/chat-widget.css";
+import { initializeChatWidget } from "oleon-chat-widget";
+```
+
+***
+
+### **Step 2: Initialize the Widget**
+
+Call the `initializeChatWidget` function in your main component or where you want the chat widget to appear.
+
+```jsx
+import React, { useEffect } from "react";
+import "oleon-chat-widget/chat-widget.css";
+import { initializeChatWidget } from "oleon-chat-widget";
+
+const App = () => {
+  useEffect(() => {
+    initializeChatWidget({
+      position: "right",
+      theme: "dark",
+      baseColor: "#007bff",
+      apiKey: "YOUR_API_KEY", // Provided after purchase
+      childServiceId: 1,
+    });
+  }, []);
+
+  return <div id="chat-widget" />;
+};
+
+export default App;
+```
+
+***
+
+## **5. Advanced Configuration**
+
+The `initializeChatWidget` function accepts an object with the following parameters:
+
+| **Parameter**    | **Type** | **Default** | **Description**                                 |
+| ---------------- | -------- | ----------- | ----------------------------------------------- |
+| `position`       | String   | `"right"`   | Position of the widget (`"left"` or `"right"`). |
+| `theme`          | String   | `"dark"`    | Choose between `"light"` or `"dark"` mode.      |
+| `baseColor`      | String   | `#007bff`   | Primary color for the widget (hex code).        |
+| `apiKey`         | String   | Required    | Your API Key for authentication.                |
+| `childServiceId` | Number   | Required    | Unique ID for your service.                     |
+| `userDetails`    | Object   | Optional    | Preload user details (e.g., name, email).       |
+
+***
+
+### **User Details Example**
+
+If you want to preload user details into the widget, pass the `userDetails` object:
+
+```jsx
+initializeChatWidget({
+  position: "left",
+  theme: "light",
+  baseColor: "#28a745",
+  apiKey: "YOUR_API_KEY",
+  childServiceId: 1,
+  userDetails: {
+    name: "John Doe",
+    email: "john.doe@example.com",
+  },
+});
+```
+
+***
+
+## **6. Customizing the Chat Widget**
+
+You can further customize the widget’s appearance and functionality:
+
+1. **CSS Overrides**
+   Add your custom CSS to override the widget styles. Example:```css
+   #chat-widget {
+     border-radius: 20px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+   }
+   ```
+
+2. **Positioning**
+   Adjust the widget's position (`left` or `right`) using the `position` parameter.
+
+***
+
+## **7. API Integration**
+
+Ensure the widget can communicate with Oleon APIs by providing the API Key and `childServiceId`. Backend token authentication happens automatically.
+
+**Request Example**:
+
+```json
+{
+  "childServiceId": 1,
+  "userId": null,
+  "message": "Hello, how can I get started?"
+}
+```
+
+**Response Example**:
+
+```json
+{
+  "userId": 154,
+  "response": "Welcome! How can I assist you today?"
+}
+```
+
+***
+
+## **8. Example Project**
+
+Here’s a simple example of a complete React project:
+
+### **App.js**
+
+```jsx
+import React, { useEffect } from "react";
+import "oleon-chat-widget/chat-widget.css";
+import { initializeChatWidget } from "oleon-chat-widget";
+
+const App = () => {
+  useEffect(() => {
+    initializeChatWidget({
+      position: "right",
+      theme: "dark",
+      baseColor: "#007bff",
+      apiKey: "YOUR_API_KEY",
+      childServiceId: 1,
+    });
+  }, []);
+
+  return (
+    <div>
+      <h1>Welcome to Our Website!</h1>
+      <p>Feel free to chat with our assistant using the chat widget.</p>
+    </div>
+  );
+};
+
+export default App;
+```
+
+***
+
+## **9. Troubleshooting**
+
+| **Issue**             | **Solution**                                           |
+| --------------------- | ------------------------------------------------------ |
+| Widget not appearing  | Check if the API Key and `childServiceId` are correct. |
+| Widget styling issues | Use custom CSS overrides.                              |
+| API key error         | Verify the API key with the Oleon dashboard.           |
+| Chat not responding   | Ensure your backend API is reachable.                  |
+
+***
+
+## **10. Support**
+
+If you encounter any issues or have questions, please contact our support team.
+
+* **Email**: [support@olee.ai](mailto:support@olee.ai)
+
+* **Website**: [https://olee.ai](https://olee.ai)
+
+***
+
+## **Changelog**
+
+* **Version 1.0**: Initial release.
+
+***
+
+With the **Oleon Chat Widget NPM Library**, you can easily integrate and customize your chatbot to deliver real-time support and a better user experience. 🎉
+
+Let us know if you need further assistance or additional customization! 🚀
