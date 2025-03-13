@@ -1,0 +1,276 @@
+---
+description: "Technical User Guide"
+title: "Olee Vision - AI Document Scanner"
+---
+
+## Application Overview
+
+The Olee AI Document Scanner is a powerful web-based application that provides intelligent document scanning and data extraction capabilities. The application is hosted at [https://euphonious-vacherin-0e48c3.netlify.app](https://euphonious-vacherin-0e48c3.netlify.app).
+
+## Features
+
+### 1. Document Scanner
+
+* **Batch Processing**: Upload and process up to 10 documents simultaneously
+
+* **File Support**: Accepts both images (JPG, PNG, GIF) and PDF files
+
+* **Size Limit**: Maximum file size of 6MB per document
+
+* **Real-time Progress Tracking**:
+
+  * Total documents count
+
+  * Processing progress with percentage
+
+  * Successful scans counter
+
+  * Failed scans counter
+
+* **Results Display**: Organized view of extracted data in tabular format
+
+* **Template Detection**: Automatic identification of document types
+
+* **Confidence Scoring**: Shows accuracy level of extracted data
+
+### 2. Bill Scanner
+
+* **Specialized Processing**: Optimized for bills and invoices
+
+* **Key Data Extraction**:
+
+  * Invoice numbers
+
+  * Dates
+
+  * Total amounts
+
+  * Item descriptions
+
+* **Batch Total Calculation**: Automatic summation of processed bills
+
+* **Raw Data Access**: View complete API response for detailed analysis
+
+### 3. NIC (National Identity Card) Scanner
+
+* **Bilingual Support**: Extracts text in both English and Sinhala
+
+* **Key Information Extraction**:
+
+  * Name (English and Sinhala)
+
+  * NIC number
+
+  * Gender
+
+  * Date of birth
+
+* **Preview Capability**: View uploaded NIC image
+
+* **Manual Editing**: Edit extracted information if needed
+
+### 4. Document Viewer
+
+* **Universal Document Support**: View any supported document type
+
+* **API Response Analysis**: Examine raw extraction results
+
+* **Side-by-side Comparison**: View document and extracted data simultaneously
+
+### 5. Template Management
+
+* **Custom Template Creation**: Define new document templates
+
+* **Field Configuration**: Specify required fields and descriptions
+
+* **Template Storage**: Save templates for future use
+
+## How to Use
+
+### Document Scanner
+
+1. **Accessing the Scanner**:
+
+   * Click "Document Scanner Demo" on the main page
+
+   * The scanner modal will open
+
+2. **Uploading Documents**:
+
+   * Drag and drop files into the upload zone
+
+   * Or click to browse and select files
+
+   * Multiple files can be selected at once
+
+3. **Processing Documents**:
+
+   * Click "Scan All Documents" to begin processing
+
+   * Monitor progress through the status bar
+
+   * View real-time statistics:
+
+     * Total documents
+
+     * Processed count
+
+     * Success/failure rates
+
+4. **Viewing Results**:
+
+   * Results are grouped by template type
+
+   * Each group shows:
+
+     * Template name
+
+     * Confidence score
+
+     * Extracted data in table format
+
+   * Failed scans are grouped separately
+
+### Bill Scanner
+
+1. **Upload Bills**:
+
+   * Select bill/invoice documents
+
+   * System automatically validates document type
+
+2. **Processing**:
+
+   * Watch real-time processing status
+
+   * View individual bill processing results
+
+3. **Results Analysis**:
+
+   * Review extracted data in structured format
+
+   * Check total amount calculation
+
+   * Examine raw API response for detailed information
+
+### NIC Scanner
+
+1. **Document Upload**:
+
+   * Upload NIC image
+
+   * View document preview
+
+2. **Data Verification**:
+
+   * Review extracted information
+
+   * Edit fields if necessary
+
+   * Verify bilingual text extraction
+
+3. **Data Management**:
+
+   * Save or reset extracted information
+
+   * View complete API response
+
+### Template Creation
+
+1. **Access Template Creator**:
+
+   * Click "Create Template" button
+
+   * Fill in template details:
+
+     * Template name
+
+     * Document type
+
+     * Required fields
+
+2. **Field Configuration**:
+
+   * Add field names and descriptions
+
+   * Configure multiple fields as needed
+
+   * Save template for future use
+
+## Technical Specifications
+
+### Supported File Formats
+
+* Images: JPG, PNG, GIF
+
+* Documents: PDF
+
+### File Limitations
+
+* Maximum file size: 6MB per document
+
+* Maximum batch size: 100 documents
+
+### System Requirements
+
+* Modern web browser (Chrome, Firefox, Safari, Edge)
+
+* Internet connection for API access
+
+## Error Handling
+
+### Common Issues and Solutions
+
+1. **File Upload Errors**:
+
+   * Check file size (must be under 6MB)
+
+   * Verify file format is supported
+
+   * Ensure files are not corrupted
+
+2. **Processing Errors**:
+
+   * Review error messages in results
+
+   * Check document quality and format
+
+   * Verify document type matches intended scanner
+
+3. **Template Issues**:
+
+   * Ensure all required fields are defined
+
+   * Check template name uniqueness
+
+   * Verify field descriptions are clear
+
+## Best Practices
+
+1. **Document Preparation**:
+
+   * Ensure good image quality
+
+   * Use clear, legible documents
+
+   * Maintain consistent document orientation
+
+2. **Batch Processing**:
+
+   * Group similar documents together
+
+   * Monitor processing progress
+
+   * Review results systematically
+
+3. **Template Management**:
+
+   * Use descriptive template names
+
+   * Provide clear field descriptions
+
+   * Test templates with sample documents
+
+## Support and Resources
+
+For technical support or questions about the application, please contact Olee AI support team or visit [www.olee.ai](https://www.olee.ai) for more information.
